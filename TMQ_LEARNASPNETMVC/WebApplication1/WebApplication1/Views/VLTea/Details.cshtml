@@ -1,0 +1,42 @@
+﻿@model WebApplication1.Models.BubleTea
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>BubleTea</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên
+        </dt>
+
+        <dd>
+            @Model.Name
+        </dd>
+
+        <dt>
+            Giá tiền
+        </dt>
+
+        <dd>
+            @Model.Price.ToString("N0")
+        </dd>
+
+        <dt>
+            Món kèm 
+        </dt>
+
+        <dd>
+            @Model.Topping
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Quay về", "Index")
+</p>
